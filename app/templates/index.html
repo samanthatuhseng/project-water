@@ -16,24 +16,32 @@
 
     <link lang='sass' rel="stylesheet" href="./static/styles/main.css">
     <link rel='icon' href='./static/img/favicon.ico' type='image/x-icon' />
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
+    <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
     <title>{{ title }}</title>
+    
 </head>
 
 <body>
     <header class="nav-bar">
         <div class="nav-content">
-            <a href="/">
+            <div class="topnav">
+                <a class="active" href="#home">Home</a>
+                <a href="#Hobbies">Hobbies</a>
                 <div class="nav-logo">
-                    <img src="./static/img/logo.svg" />
-                </div>
-            </a>
-        </div>
+                    <a href="/"><img src="./static/img/logo.svg"></a>
+                 </div>
+        </div> 
+      </div>
     </header>
 
     <div class="profile">
         <div id="profile-picture" class="profile-picture">
-            <img src="./static/img/logo.jpg">
+            <img src="./static/img/nora.jpeg">
+            <img src="./static/img/sherry.jpg">
+            <img src="./static/img/samantha.jpg">
         </div>
+        
         <h1>{{ title }}</h1>
     </div>
 </body>

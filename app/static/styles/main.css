@@ -34,7 +34,8 @@ body {
 .nav-logo {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: left;
+    padding-left: 30px;
 }
 
 .nav-logo img {
@@ -68,7 +69,7 @@ body {
         max-height: 100%;
         margin-left: auto;
         margin-right: auto;
-        display: block;        
+        display: auto;        
         padding: 20px;
 }
 
@@ -95,3 +96,42 @@ body {
     font-size: 50px;
     font-weight: 700;
 }
+
+/* Add a black background color to the top navigation */
+.topnav {
+    background-color: #1d539f;
+    overflow: hidden;
+    margin: 10px;
+  }
+  
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    float: right;
+    color: #f2f2f2;
+    text-align: right;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  /* Change the color of links on hover */
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+    border-radius: 30px;
+  }
+
+  .nav-logo a:hover {
+    background-color: transparent;
+  }
+  
+  /* Add a color to the active/current link */
+  .topnav a.active {
+    background-color: #ffe14c;
+    color: white;
+    border-radius: 30px;
+  }
+
+  /*map*/
+
+ 
