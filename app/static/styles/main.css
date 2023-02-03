@@ -34,7 +34,8 @@ body {
 .nav-logo {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: left;
+    padding-left: 30px;
 }
 
 .nav-logo img {
@@ -68,7 +69,7 @@ body {
         max-height: 100%;
         margin-left: auto;
         margin-right: auto;
-        display: block;        
+        display: auto;        
         padding: 20px;
 }
 
