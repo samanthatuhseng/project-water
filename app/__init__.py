@@ -8,3 +8,6 @@ app = Flask(__name__)
 def index():
     return render_template('index.html', title="Group Water", url=os.getenv("URL"))
 
+@app.route('/hobbies')
+def hobbies():
+    return render_template("hobbies.html")
