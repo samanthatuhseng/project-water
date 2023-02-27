@@ -19,8 +19,8 @@ class TimelinePost(Model):
     class Meta:
         database = mydb
 
-mydb.connect()
 mydb.create_tables([TimelinePost])
+mydb.connect()
 
 @app.route('/api/timeline_post', methods=['POST'])
 def post_time_line_post():
