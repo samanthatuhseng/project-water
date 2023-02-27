@@ -7,8 +7,7 @@ from playhouse.shortcuts import model_to_dict
 app = Flask(__name__)
 
 
-mydb=MySQLDatabase(os.getenv("MYSQL_DATABASE"), user=os.getenv("MYSQL_USER"), password=os.getenv("MYSQL_PASSWORD"), host=os.getenv("MYSQL_HOST"), port=3306)
-mydb.close()
+mydb=MySQLDatabase(os.getenv("MYSQL_DATABASE"), user=os.getenv("MYSQL_USER"), password=os.getenv("MYSQL_PASSWORD"), host=os.getenv("MYSQL_HOST"), port=3306, pragmas={'foreign_keys': 1})
 print(mydb)
 
 class TimelinePost(Model):
@@ -21,6 +20,7 @@ class TimelinePost(Model):
         database = mydb
 
 mydb.create_tables([TimelinePost])
+mydb.close()
 mydb.connect()
 
 @app.route('/api/timeline_post', methods=['POST'])
