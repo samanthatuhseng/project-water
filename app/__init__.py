@@ -10,6 +10,9 @@ app = Flask(__name__)
 mydb=MySQLDatabase(os.getenv("MYSQL_DATABASE"), user=os.getenv("MYSQL_USER"), password=os.getenv("MYSQL_PASSWORD"), host=os.getenv("MYSQL_HOST"), port=3306, pragmas={'foreign_keys': 1})
 print(mydb)
 
+mydb.connect()
+mydb.create_tables([TimelinePost])
+
 class TimelinePost(Model):
     name = CharField()
     email = CharField()
@@ -18,10 +21,6 @@ class TimelinePost(Model):
 
     class Meta:
         database = mydb
-
-mydb.create_tables([TimelinePost])
-mydb.close()
-mydb.connect()
 
 @app.route('/api/timeline_post', methods=['POST'])
 def post_time_line_post():
