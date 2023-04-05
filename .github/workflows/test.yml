@@ -9,7 +9,7 @@ on:
 
 jobs:
   test:
-    run-ons: ubuntu-20.04
+    runs-ons: ubuntu-20.04
     name: Run Tests
     eng:
       TESTING: true
