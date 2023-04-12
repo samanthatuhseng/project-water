@@ -13,7 +13,7 @@ services:
     volumes:
       - .:/myportfolio
     depends_on:
-      -mysql
+      - mysql
 
   mysql:
     container_name: mysql
