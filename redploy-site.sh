@@ -1,7 +1,7 @@
 #!/bin/bash
 chmod +x redploy-site.sh
 # Step: cd into project folder
-cd /path/to/your/project-folder
+cd project-water/
 
 # Step: Get latest changes from main branch on GitHub
 git fetch && git reset origin/main --hard
