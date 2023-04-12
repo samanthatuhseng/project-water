@@ -1,5 +1,4 @@
 #!/bin/bash
-chmod +x redploy-site.sh
 # Step: cd into project folder
 cd project-water/
 
