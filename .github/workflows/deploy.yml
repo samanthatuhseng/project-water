@@ -29,4 +29,4 @@ jobs:
           SSH_IP: ${{ secrets.SSH_IP }}
 
       - name: Deploy Site
-        run: ./redeploy-site.sh
+        run: ssh -v root@159.203.24.250 '/root/redeploy-site.sh'
