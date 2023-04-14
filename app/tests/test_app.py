@@ -65,7 +65,7 @@ class AppTestCase(unittest.TestCase):
             html = response. get_data(as_text=True)
             assert "Invalid name" in html
             # POST request with emptv content
-            response = self.client.post("/api/timeline_post", data-
+            response = self.client.post("/api/timeline_post", data=
             {" name":
             "John Doe", "email": "john@example.com",
             "content": ""})

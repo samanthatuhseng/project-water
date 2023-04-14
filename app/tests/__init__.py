@@ -3,21 +3,12 @@ from flask import Flask, render_template, request
 from peewee import *
 import datetime
 from playhouse.shortcuts import model_to_dict
-from test_db import test_db
 
 app = Flask(__name__)
 
 
-if os.getenv("TESTING") == "true":
-    print("Running in test mode")
-    mydb = test_db
-else:
-    mydb = MySQLDatabase(os.getenv("MYSQL_DATABASE"),
-        user=os.getenv("MYSQL_USER"),
-        password=os.getenv("MYSQL_PASSWORD"),
-        host=os.getenv("MYSQL_HOST"),
-        port=3306
-    )
+mydb=MySQLDatabase(os.getenv("MYSQL_DATABASE"), user=os.getenv("MYSQL_USER"), password=os.getenv("MYSQL_PASSWORD"), host=os.getenv("MYSQL_HOST"), port=3306)
+print(mydb)
 
 class TimelinePost(Model):
     name = CharField()
